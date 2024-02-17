@@ -1,37 +1,15 @@
-function addRow() {
-  
-  let rowDiv = document.createElement("div");
-  rowDiv.classList.add("row");
-  addCell(rowDiv);
-  document.querySelector('.container').appendChild(rowDiv);
-  
-}
-
-function addCell(parent) {
-  let cell = document.createElement("div");
-  cell.classList.add("cell");
-  let size = "100px";
-  cell.style.width = size;
-  cell.style.height = size;
-  parent.appendChild(cell);
-}
+let gridContainer = document.querySelector(".container");
+let totalNoSquares = 255;
 
 
-function addColumn() {
-  let columnDiv = document.createElement("div");
-  columnDiv.classList.add("column");
-  addCell(columnDiv);
-  document.querySelector('.container').appendChild(columnDiv);
-}
 
-let gridSize = 2;
+function generateGrid() {
+  for (let i = 1; i <= totalNoSquares; i++) {
+    gridSquare = document.createElement("div");
+    let squareStyle = document.querySelector("div");
+    squareStyle.setAttribute('style', 'display: flex;', 'flex-wrap: wrap');
+    gridContainer.appendChild(gridSquare);
+  }
+}  
 
-function createGrid() {
-  addRow();
-  addColumn();
-  // addColumn();
-}
-  
-
-createGrid();
-
+generateGrid();
