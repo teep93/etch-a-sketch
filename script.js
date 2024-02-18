@@ -1,5 +1,5 @@
 let gridContainer = document.querySelector(".container");
-let totalNoSquares = 255;
+let totalNoSquares = 256;
 
 
 

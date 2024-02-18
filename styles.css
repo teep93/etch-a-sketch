@@ -1,18 +1,51 @@
-.container {
-    border: 1px solid #000
-    width: 800px;
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    overflow:auto;
+}
+
+.header {
+    justify-content: center;
+    height: 150px;
+    align-items: center;
+    font-size: xx-large;
+}
+.wrapper {
     display: flex;
-    flex-wrap: wrap;
+    border: 1px solid black;
+    height: 100vh;
+    width: 100vw;
+    max-height: 600px;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+
+.settings {
+    border: 1px solid black;
+    height: 80%;
+    width: 300px;
+}
+
+.container {
+    border: 1px solid black;
+    width: 960px;
+    height: 80%;
+    /* display: flex;
+    flex-wrap: wrap; */
 
     
     
     
 }
 
-.container div {
+/* .container div {
     width: 100px;
     height: 100px;
     border: 1px solid blue;
     box-sizing: border-box;
 
-}
+} */
