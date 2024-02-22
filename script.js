@@ -1,5 +1,5 @@
-let row = 4;
-let column = 4;
+let row = 10;
+let column = 10;
 const height = 500;
 const width = 500;
 let inputRow = '';
@@ -15,10 +15,11 @@ let squares = document.querySelectorAll(".squareDiv");
 let square = document.querySelector(".squareDiv")
 
 function createNewGrid(parent) {
+  let x = prompt("Enter a value between 1-100");
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
-  templateGrid();
+  generateNewSketchPad(x);
 }  
   
 
@@ -53,4 +54,17 @@ newGrid.addEventListener("click", () => {
   createNewGrid(outerContainer);
 
 });
+
+function generateNewSketchPad(x) {
+  for (let i = 1; i <= x * x; i++) {
+    let innerContainer = document.createElement("div");
+    innerContainer.classList.add("squareDiv");
+    innerContainer.style.height = `${height / x}px`;
+    innerContainer.style.width = `${width / x}px`;
+    innerContainer.style.flex = "auto";
+    innerContainer.classList.add("hover");
+    outerContainer.appendChild(innerContainer);
+  }
+  addHover();
+}
 
